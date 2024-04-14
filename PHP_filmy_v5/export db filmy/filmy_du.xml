@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 5.2.1
+- https://www.phpmyadmin.net
+-
+- Hostiteľ: 127.0.0.1
+- Čas generovania: Sun 14.Apr 2024, 22:15
+- Verzia serveru: 10.4.32-MariaDB
+- Verzia PHP: 8.2.12
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="https://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="filmy_du" collation="utf8_general_ci" charset="utf8">
+            <pma:table name="filmy">
+                CREATE TABLE `filmy` (
+                  `id_film` int(11) NOT NULL AUTO_INCREMENT,
+                  `poradie` int(120) NOT NULL,
+                  `názov_filmu` varchar(120) DEFAULT NULL,
+                  `žáner` varchar(60) DEFAULT NULL,
+                  `dĺžka` int(11) DEFAULT NULL,
+                  `krajina` varchar(60) DEFAULT NULL,
+                  PRIMARY KEY (`id_film`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=48 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+            </pma:table>
+            <pma:table name="jazyk">
+                CREATE TABLE `jazyk` (
+                  `id_jazyk` int(11) NOT NULL AUTO_INCREMENT,
+                  `jazyk_filmu` varchar(60) DEFAULT NULL,
+                  `titulky` varchar(60) DEFAULT NULL,
+                  PRIMARY KEY (`id_jazyk`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Databáza: 'filmy_du'
+    -->
+    <database name="filmy_du">
+        <!-- Tabuľka filmy -->
+        <table name="filmy">
+            <column name="id_film">1</column>
+            <column name="poradie">1</column>
+            <column name="názov_filmu">Pokus</column>
+            <column name="žáner">Komedia</column>
+            <column name="dĺžka">165</column>
+            <column name="krajina">Francuzsko</column>
+        </table>
+        <table name="filmy">
+            <column name="id_film">3</column>
+            <column name="poradie">2</column>
+            <column name="názov_filmu">Batman a Robin</column>
+            <column name="žáner">Drama</column>
+            <column name="dĺžka">125</column>
+            <column name="krajina">USA</column>
+        </table>
+        <table name="filmy">
+            <column name="id_film">37</column>
+            <column name="poradie">3</column>
+            <column name="názov_filmu">Duna 3</column>
+            <column name="žáner">Drama</column>
+            <column name="dĺžka">165</column>
+            <column name="krajina">Francuzsko</column>
+        </table>
+        <table name="filmy">
+            <column name="id_film">38</column>
+            <column name="poradie">4</column>
+            <column name="názov_filmu">Pokus</column>
+            <column name="žáner">Detektivka</column>
+            <column name="dĺžka">165</column>
+            <column name="krajina">USA</column>
+        </table>
+        <table name="filmy">
+            <column name="id_film">39</column>
+            <column name="poradie">5</column>
+            <column name="názov_filmu">hhhh</column>
+            <column name="žáner">Komedia</column>
+            <column name="dĺžka">125</column>
+            <column name="krajina">Francuzsko</column>
+        </table>
+        <table name="filmy">
+            <column name="id_film">40</column>
+            <column name="poradie">6</column>
+            <column name="názov_filmu">Duna 4</column>
+            <column name="žáner">Sci-fi</column>
+            <column name="dĺžka">165</column>
+            <column name="krajina">USA</column>
+        </table>
+        <table name="filmy">
+            <column name="id_film">46</column>
+            <column name="poradie">7</column>
+            <column name="názov_filmu">Dracula</column>
+            <column name="žáner">Horror</column>
+            <column name="dĺžka">165</column>
+            <column name="krajina">USA</column>
+        </table>
+        <!-- Tabuľka jazyk -->
+        <table name="jazyk">
+            <column name="id_jazyk">1</column>
+            <column name="jazyk_filmu">Angličtina</column>
+            <column name="titulky">SK</column>
+        </table>
+        <table name="jazyk">
+            <column name="id_jazyk">2</column>
+            <column name="jazyk_filmu">Angličtina</column>
+            <column name="titulky">CZ</column>
+        </table>
+        <table name="jazyk">
+            <column name="id_jazyk">3</column>
+            <column name="jazyk_filmu">Francúzština</column>
+            <column name="titulky">SK</column>
+        </table>
+        <table name="jazyk">
+            <column name="id_jazyk">4</column>
+            <column name="jazyk_filmu">Francúzština</column>
+            <column name="titulky">CZ</column>
+        </table>
+        <table name="jazyk">
+            <column name="id_jazyk">5</column>
+            <column name="jazyk_filmu">Čeština</column>
+            <column name="titulky">Bez titulkov</column>
+        </table>
+    </database>
+</pma_xml_export>
